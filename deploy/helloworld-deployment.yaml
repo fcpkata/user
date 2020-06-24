@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tamil-service-deployment
+  namespace: shop
+  labels:
+    app: tamil-helloworld
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tamil-helloworld
+  template:
+    metadata:
+      labels:
+        app: tamil-helloworld
+    spec:
+      containers:
+      - name: tamil-helloworld
+        image: siddhi/spring-boot:tamil
+        ports:
+        - containerPort: 8080
+
