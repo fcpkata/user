@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.ford'
+group = 'com.shoppingcart'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -20,11 +20,14 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	runtimeOnly 'io.springfox:springfox-swagger-ui:2.5.0'
+    implementation 'io.springfox:springfox-swagger2:2.5.0'
+	
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testImplementation('junit:junit:4.13')
+	testImplementation('org.assertj:assertj-core')
 }
 
 test {

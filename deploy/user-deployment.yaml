@@ -4,19 +4,19 @@ metadata:
   name: tamil-service-deployment
   namespace: shop
   labels:
-    app: tamil-helloworld
+    app: tamil-user
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: tamil-helloworld
+      app: tamil-user
   template:
     metadata:
       labels:
-        app: tamil-helloworld
+        app: tamil-user
     spec:
       containers:
-      - name: tamil-helloworld
+      - name: tamil-user
         image: siddhi/spring-boot:tamil
         ports:
         - containerPort: 8080
