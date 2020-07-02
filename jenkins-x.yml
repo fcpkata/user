@@ -1,1 +1,4 @@
 buildPack: gradle
+pipelineOverrides:
+  agent:
+    image: https://gcr.io/jenkinsxio/builder-gradle5-java11:2.1.96-723
