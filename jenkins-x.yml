@@ -3,5 +3,5 @@ buildPack: gradle
 pipelineConfig:
   pipelines:
     overrides:
-      agent:
-        image: https://gcr.io/jenkinsxio/builder-gradle5-java11:2.1.96-723
+      - agent:
+          image: https://gcr.io/jenkinsxio/builder-gradle5-java11:2.1.96-723
