@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/api/v1")
 public class UserController {
 	@ApiOperation(
 			value = "User Service",
