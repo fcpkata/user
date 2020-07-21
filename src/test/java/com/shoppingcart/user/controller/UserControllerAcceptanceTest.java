@@ -20,7 +20,7 @@ class UserControllerAcceptanceTest {
 
 	@Test
 	void test() throws Exception {
-		mockMvc.perform(get("/v1/user")).andDo(print()).andExpect(status().isOk())
+		mockMvc.perform(get("/api/v1/user")).andDo(print()).andExpect(status().isOk())
 				.andExpect(jsonPath("$.name").value("Tom")).andExpect(jsonPath("$.id").value("123"));
 	}
 
